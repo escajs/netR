@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import Axios from 'axios'
-import { set } from 'mongoose'
 const SignUp = () => {
     const [$email,setEmail] = useState('')
     const [$pass,setPass] = useState('')
