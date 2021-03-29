@@ -5,7 +5,7 @@ const Login = () => {
     const [userPassword,setUserPassword] = useState('')
     const [passErr,setpassErr] = useState('')
     const signIn = () =>{
-        Axios.post('http://localhost:2000/login',
+        Axios.post('https://urlshrinker-back.herokuapp.com/login',
         {
            name : userName,
            passcode : userPassword 

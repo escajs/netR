@@ -7,7 +7,7 @@ const SignUp = () => {
     const [$name,setName] = useState('')
     //send Using Axios
     const sendUser = () =>{
-       Axios.post('http://localhost:2000/signup',
+       Axios.post('https://urlshrinker-back.herokuapp.com/signup',
        {
            userEmail :$email,
             userPass :$pass,

@@ -7,7 +7,7 @@ const NewLinkPage = () => {
         if(url.startsWith('https://') || url.startsWith('https://') ){
 
 
-            Axios.post('http://localhost:2000/newLink',{_url : url,tk : localStorage.getItem('token')
+            Axios.post('https://urlshrinker-back.herokuapp.com/newLink',{_url : url,tk : localStorage.getItem('token')
         }).then(rsp=>{
            if(rsp.data.added){
                window.location.replace('/dash')

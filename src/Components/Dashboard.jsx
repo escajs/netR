@@ -7,7 +7,7 @@ const Dashboard = () => {
     const [userLinks,setUserLinks] = useState([])
     const [isLoading,setIsLoading] = useState(true)
     useEffect(()=>{
-        Axios.get('http://localhost:2000/userLinks',{
+        Axios.get('https://urlshrinker-back.herokuapp.com/userLinks',{
             headers : {"x-access-token" : localStorage.getItem('token')}
         })
         .then(resp =>{
@@ -37,7 +37,7 @@ const Dashboard = () => {
                     return (
                         <tr key={Math.random().toString(36).substr(2,6)}>
                             <td><a href={url['LONGURL']}>{url['LONGURL']}</a></td>
-                            <td><a href={"http://localhost:2000/"+url['SHORTURL']}>http://localhost:2000/{url['SHORTURL']}</a></td>
+                            <td><a href={"https://urlshrinker-back.herokuapp.com/"+url['SHORTURL']}>https://urlshrinker-back.herokuapp.com/{url['SHORTURL']}</a></td>
                             <td><QRCode size={60} value={url['LONGURL']} /></td>
                         </tr>
                     )
