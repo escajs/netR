@@ -12,7 +12,7 @@ const Home = () => {
                </div>
             </div>
             <div>
-            <img src="workerslanding.svg"/>
+            <img src="workerslanding.svg" alt="land"/>
             </div>
         </section>
         <div className="divider"></div>
